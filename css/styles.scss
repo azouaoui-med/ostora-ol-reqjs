@@ -1,0 +1,73 @@
+@import 'mixins';
+@import '../app/header/header';
+@import "../app/widgets/widgetContainer";
+body {
+    overflow: hidden;
+}
+
+#main {
+    width: 100vw;
+    height: calc(100vh - 56px);
+    margin-top: 56px;
+    overflow: hidden;
+    position: relative;
+    #map {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+#footer {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+//openlayers styles
+.ol-overlaycontainer-stopevent {
+    position: absolute;
+    top: .5em;
+    right: .5em;
+    left: initil;
+    .ol-zoom,
+    .ol-rotate {
+        position: static;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        background-color: #fff;
+        border-radius: 0;
+        padding: 0;
+        margin-bottom: 2px;
+        button {
+            font-size: 14px;
+            background-color: #fff;
+            color: #212529;
+            width: 32px;
+            height: 32px;
+            outline: none;
+            cursor: pointer;
+            transition: background-color 125ms ease-in-out;
+            margin: 0;
+            &:last-child {
+                border-top: solid 1px rgba(50, 50, 50, 0.25);
+            }
+            &:first-child {
+                border-top: none;
+            }
+            &:hover,
+            &:focus {
+                color: #16181b;
+                background-color: #f8f9fa;
+            }
+        }
+    }
+    .ol-attribution {
+        position: fixed;
+    }
+}
+
+.form-control,
+.btn {
+    border-radius: 0;
+}
